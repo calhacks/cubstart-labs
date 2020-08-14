@@ -9,8 +9,9 @@
   <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-  <!-- Google Fonts: Muli -->
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,700,800&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+    rel="stylesheet">
 
   <!-- For responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +20,20 @@
 </head>
 
 <body>
+  <h1>Dad Jokes</h1>
+  <div id="random-container">
+    <h2>Random Dad Joke</h2>
+    <p id="random">[Populate this with a random joke using the API!]</p>
+  </div>
+  <div id="search-container">
+    <h2>Dad Joke Search</h2>
+    <input id="search-input" placeholder="Search..." />
+    <ul id="search-results">
+      <li>[Populate these results based on search!]</li>
 
+    </ul>
+  </div>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
