@@ -2,28 +2,6 @@
 <html>
 
 <head>
-  <!-- Sentry Error Monitoring -->
-  <script src="https://browser.sentry-cdn.com/5.14.1/bundle.min.js"
-    integrity="sha384-uNLty2kYRXkczv6MLytto1fP/VzNBKjYpUNIpNa3yvW0CYZrzJE4TyvUBDHtbMmq"
-    crossorigin="anonymous"></script>
-  <script>
-    Sentry.init({
-      dsn: 'https://49be4fdd0db3435884b9a5c33b20f5ab@sentry.io/2836115'
-    });
-  </script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158603824-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-158603824-3');
-  </script>
-
   <link rel="shortcut icon" href="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/favicon.ico" />
 
   <link rel="stylesheet" href="./css/cubstart/cubstart.css" />
@@ -258,27 +236,6 @@
   </div>
 </body>
 <script>
-  function subscribe() {
-    const email = document.getElementById('email-input').value;
-
-    fetch('https://api.calhacks.io/static/subscribe', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email })
-    }).then((response) => {
-      if (response.status !== 204) return;
-
-      document.getElementById('email-input').value = '';
-
-      document
-        .getElementById('notification-confirmation')
-        .classList.remove('hide');
-      document.getElementById('notification-input').classList.add('hide');
-    });
-  }
-
   const scrollToContent = function () {
     document.getElementById('content').scrollIntoView({
       behavior: 'smooth'
