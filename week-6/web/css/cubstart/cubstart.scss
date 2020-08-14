@@ -1,0 +1,179 @@
+@import '../common/common.scss';
+
+#splash {
+  #splash-body {
+    flex-direction: column;
+    width: 50%;
+    max-width: 450px;
+    text-align: center;
+
+    @media only screen and (max-width: 850px) {
+      width: 80%;
+      max-width: 320px;
+    }
+
+    #splash-combo-title {
+      img {
+        height: 15rem;
+        margin: -2rem;
+        margin-top: -4rem;
+      }
+    }
+
+    p {
+      color: $blue;
+    }
+  }
+}
+
+#content {
+  width: 60%;
+  max-width: 800px;
+
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  @media only screen and (max-width: 850px) {
+    width: 80%;
+    max-width: none;
+    margin-top: 2rem;
+  }
+
+  #curriculum {
+    #curriculum-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media only screen and (max-width: 850px) {
+        flex-direction: column;
+      }
+
+      #curriculum-content {
+        width: calc(60% - 1rem);
+        p {
+          indent {
+            display: block;
+            padding-left: 2rem;
+            font-weight: normal;
+
+            @media only screen and (max-width: 850px) {
+              padding-left: 0;
+            }
+          }
+        }
+
+        @media only screen and (max-width: 850px) {
+          width: 100%;
+
+          p:not(:first-child) {
+            font-weight: bold;
+            b {
+              display: none;
+            }
+          }
+        }
+      }
+
+      #curriculum-images {
+        width: calc(40% - 1rem);
+
+        @media only screen and (max-width: 850px) {
+          width: 100%;
+        }
+
+        img {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  #numbers {
+    text-align: center;
+
+    h2 {
+      text-align: left;
+    }
+
+    #numbers-stats {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .stat {
+        width: 30%;
+      }
+    }
+  }
+
+  #words {
+    #words-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      @media only screen and (max-width: 850px) {
+        flex-direction: column;
+      }
+
+      p,
+      img {
+        width: calc(50% - 1rem);
+
+        @media only screen and (max-width: 850px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #faq {
+    #faq-columns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media only screen and (max-width: 850px) {
+        flex-direction: column;
+        justify-content: start;
+      }
+
+      .faq-column {
+        width: calc((100% - 4rem) / 2);
+
+        @media only screen and (max-width: 850px) {
+          width: 100%;
+          margin-bottom: 0;
+        }
+
+        .faq-section {
+          h4 {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .content-section {
+    h2 {
+      color: $blue;
+    }
+
+    h2,
+    h4,
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: 850px) {
+      margin-bottom: 2rem;
+    }
+  }
+}
