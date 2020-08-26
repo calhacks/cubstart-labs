@@ -1,0 +1,87 @@
+body {
+	font-size: 100%;
+	font-family: Arial;
+	background-color: ivory;
+	color: #553912;
+}
+
+.container {
+	max-width: 80%;
+ 	margin: 3% auto;
+}
+
+/* PART 2A: Positioning elements */
+.card {
+	/* INSERT HERE */ 
+	background-color: mistyrose;
+	border-radius: 20px;
+}
+	
+.card .column {
+	/* INSERT HERE */ 
+	/* INSERT HERE */ 
+  	justify-content: center;
+}
+
+.card .column p {
+	margin: 0;
+}
+
+/* PART 2B: Playing around with styling elements */ 
+.card img {
+	padding: 20px;
+	/* INSERT HERE */
+	max-width: 20em;
+	max-height: 15em;
+}
+
+.card img:hover {
+	/* INSERT HERE */ 
+}
+.card h1 {
+	/* INSERT HERE */
+ 	font-size: 50px;
+  	margin: 0px;
+}
+
+.card p {
+	/*INSERT HERE */ 
+  	/*INSERT HERE */ 
+  	margin: 0px;
+}
+
+#hover-style {
+	margin: 1em 0; 
+}
+
+#hover-style p {
+	/* INSERT HERE */
+	/* INSERT HERE */
+}
+
+#hover-style /* INSERT HERE */ {
+	/* INSERT HERE */
+	/* INSERT HERE */
+	color: #98856A;
+}
+
+.text h3{
+	/*INSERT HERE */ 
+}
+
+/* PART 2C: HTML and  CSS Practice */ 
+.text /* INSERT HERE */ {
+	color: #98856A;
+}
+
+/* INSERT HERE */ {
+	color: lightcoral;
+}
+
+.hints:after {
+  content: "Hover over me for hints!";
+  color: lightcoral;
+}
+
+.hints:hover:after {
+  content: "The color is lightcoral! Did you know you can add filters to images? Give it a try! Check out the Notion for more hints.
