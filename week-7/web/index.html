@@ -4,36 +4,243 @@
 <head>
   <link rel="shortcut icon" href="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/favicon.ico" />
 
-  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/cubstart/cubstart.css" />
 
   <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-    rel="stylesheet">
+  <!-- Google Fonts: Muli -->
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,700,800&display=swap" rel="stylesheet" />
 
   <!-- For responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Dad Jokes</title>
+  <title>Cubstart</title>
 </head>
 
 <body>
-  <h1>Dad Jokes</h1>
-  <div id="random-container">
-    <h2>Random Dad Joke</h2>
-    <p id="random">[Populate this with a random joke using the API!]</p>
-  </div>
-  <div id="search-container">
-    <h2>Dad Joke Search</h2>
-    <input id="search-input" placeholder="Search..." />
-    <ul id="search-results">
-      <li>[Populate these results based on search!]</li>
+  <!-- Splash (top 100vh of page) -->
+  <div id="splash">
+    <a href="/"><img id="logo" src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/logo.png" /></a>
 
-    </ul>
+    <!-- Splash body -->
+    <div id="splash-body">
+      <div id="splash-combo-title">
+        <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/cubstart.png" />
+        <h1>Cubstart</h1>
+      </div>
+      <h4>Your goal for [Web] Week 6 is to deploy this website (for our origial Cubstart initiative) to the Internet!
+      </h4>
+    </div>
+
+    <!-- Background -->
+    <div id="splash-background"></div>
+
+    <!-- Down indicator -->
+    <i id="down-indicator" class="material-icons" onclick="scrollToContent();">
+      keyboard_arrow_down
+    </i>
   </div>
-  <script src="./js/script.js"></script>
+  <div id="content">
+    <div id="intro" class="content-section">
+      <h2>
+        Why Cubstart?
+      </h2>
+      <p>
+        We provide mentorship for team building, ideation, basic hackathon
+        skills, and technical workshops to encourage those with little or no
+        CS experience to try out hackathons and coding! If you believe you are
+        someone who is passionate about learning and wants to create a
+        hackathon project from start to finish, Cubstart is the place for you.
+      </p>
+    </div>
+    <div id="curriculum" class="content-section">
+      <h2>
+        Curriculum
+      </h2>
+      <div id="curriculum-body">
+        <div id="curriculum-content">
+          <p>
+            Through a series of four workshops covering two main tracks - Web
+            Development and iOS Development - attendees will learn about what
+            a hackathon really is as well as develop skills to aid them with
+            building a successful hack.
+          </p>
+          <p>
+            <b>Workshop 1 • </b>Intro & Orientation • TBD <br />
+            <indent>Welcome to Cubstart! Learn all about what a hackathon is, form
+              a team, and start thinking about ideas to pursue.</indent>
+          </p>
+          <p>
+            <b>Workshop 2 • </b>Diving into Code • TBD <br />
+            <indent><b>Web Development:</b> Intro to HTML + CSS <br />
+              <b>iOS Development:</b> Swift crash course + Basic App</indent>
+          </p>
+          <p>
+            <b>Workshop 3 • </b>Styling and Building • TBD <br />
+            <indent><b>Web Development:</b> Styling with more CSS + JS <br />
+              <b>iOS Development:</b> Maps tooling and SDK</indent>
+          </p>
+          <p>
+            <b>Workshop 4 • </b>API Day • TBD <br />
+            <indent><b>Web Development:</b> More JS + small Flask App to call API
+              <br />
+              <b>iOS Development:</b> Scraping and calling APIs</indent>
+          </p>
+        </div>
+        <div id="curriculum-images">
+          <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/images/cubstart_1.jpg" />
+          <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/images/cubstart_2.jpg" />
+        </div>
+      </div>
+    </div>
+    <div id="numbers" class="content-section">
+      <h2>
+        Cubstart in Numbers
+      </h2>
+      <div id="numbers-stats">
+        <div class="stat">
+          <h1>4</h1>
+          <h4>Workshops</h4>
+        </div>
+        <div class="stat">
+          <h1>80</h1>
+          <h4>First-time Hackers</h4>
+        </div>
+        <div class="stat">
+          <h1>1:1</h1>
+          <h4>Mentor-to-team Ratio</h4>
+        </div>
+      </div>
+    </div>
+    <div id="words" class="content-section">
+      <h2>
+        Cubstart in Words
+      </h2>
+      <div id="words-body">
+        <p>
+          “As someone who basically have no idea what a Hackathon is, the
+          session was really helpful and somewhat inspiring. I really
+          understood what a 'good' idea is and how there is no fixed
+          definition.”
+        </p>
+        <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/images/cubstart_workshop.jpg" />
+      </div>
+    </div>
+    <div id="faq" class="content-section">
+      <h2 class="blue-text">
+        FAQ
+      </h2>
+      <div id="faq-columns">
+        <div class="faq-column">
+          <div class="faq-section">
+            <h4>What is Cubstart?</h4>
+            <p>
+              Cubstart is our initiative to introduce the hackathon space to
+              beginners from all backgrounds interested in technology.
+            </p>
+          </div>
+          <div class="faq-section">
+            <h4>What's the time commitment like?</h4>
+            <p>
+              A hackathon is an event where students create tech projects in a
+              collaborative environment. Students begin with an idea and work
+              towards a complete project over the course of 36 hours. Cubstart
+              itself is mandatory 4 Saturdays leading up to the event!
+            </p>
+          </div>
+          <div class="faq-section">
+            <h4>What if I don't have any coding or hacking experience?</h4>
+            <p>
+              It's absolutely fine if you don't! This program is designed for
+              beginners, and you don't need prior coding or hackathon
+              experience at all.
+            </p>
+          </div>
+          <div class="faq-section">
+            <h4>
+              Can I take the same team from Cubstart to Cal Hacks?
+            </h4>
+            <p>
+              Yes! In fact, it is encouraged!
+            </p>
+          </div>
+        </div>
+        <div class="faq-column">
+          <div class="faq-section">
+            <h4>Who can apply to Cubstart?</h4>
+            <p>
+              Unfortunately, this program is only open for students enrolled
+              at UC Berkeley, but students of ALL grades and majors are
+              encouraged to apply!
+            </p>
+          </div>
+          <div class="faq-section">
+            <h4>How is Cubstart formatted?</h4>
+            <p>
+              Combination of workshop + office hours + hands-on activities.
+            </p>
+          </div>
+          <div class="faq-section">
+            <h4>Can I apply without a team or idea?</h4>
+            <p>
+              Yes, there will be a team mixer to form teams for the hackathon!
+              And we can help with ideation.
+            </p>
+          </div>
+          <div class="faq-section">
+            <h4>
+              If I get accepted to Cubstart, do I get accepted to Cal Hacks?
+            </h4>
+            <p>
+              Yes! Cubstart participants will be able to participate in Cal
+              Hacks 7.0.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div id="footer-content">
+      <img id="footer-logo"
+        src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/cal_hacks_outline.png" />
+      <div class="footer-links">
+        <div class="footer-links-column">
+          <a href="https://calhacks-sierra.s3-us-west-2.amazonaws.com/coc.pdf" target="_blank"
+            rel="noopener noreferrer">Code of Conduct</a>
+          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" rel="noopener noreferrer">MLH
+            Code of Conduct</a>
+          <div>
+            <a href="https://www.facebook.com/CalHacks/" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon"
+                src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/facebook.svg" />
+            </a>
+            <a href="https://twitter.com/CalHacks" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon"
+                src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/twitter.svg" />
+            </a>
+            <a href="https://www.instagram.com/calhacks.io/" target="_blank" rel="noopener noreferrer">
+              <img class="connect-icon"
+                src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/instagram.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-column"></div>
+      </div>
+      <div id="footer-tagline">
+        <h5>Made with ♡, by Cal Hacks</h5>
+      </div>
+    </div>
+    <div id="footer-background"></div>
+  </div>
 </body>
+<script>
+  const scrollToContent = function () {
+    document.getElementById('content').scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+</script>
 
 </html>
